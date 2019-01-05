@@ -1,0 +1,23 @@
+[02-Jul-2018 12:09:40 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/m1rgv5qz72o0/public_html/work/mail.php) is not within the allowed path(s): (G:\PleskVhosts\walkneeds.com\myshoperoochat.walkneeds.com) in Unknown on line 0
+[02-Jul-2018 12:09:40 UTC] PHP Warning:  Unknown: failed to open stream: Operation not permitted in Unknown on line 0
+[02-Jul-2018 12:09:40 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/m1rgv5qz72o0/public_html/work/mail.php' (include_path='.:/opt/alt/php71/usr/share/pear') in Unknown on line 0
+[02-Jul-2018 12:10:05 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/m1rgv5qz72o0/public_html/work/mail.php) is not within the allowed path(s): (G:\PleskVhosts\walkneeds.com\myshoperoochat.walkneeds.com) in Unknown on line 0
+[02-Jul-2018 12:10:05 UTC] PHP Warning:  Unknown: failed to open stream: Operation not permitted in Unknown on line 0
+[02-Jul-2018 12:10:05 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/m1rgv5qz72o0/public_html/work/mail.php' (include_path='.:/opt/alt/php71/usr/share/pear') in Unknown on line 0
+[02-Jul-2018 12:12:24 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/m1rgv5qz72o0/public_html/work/mail.php) is not within the allowed path(s): (G:\PleskVhosts\walkneeds.com\myshoperoochat.walkneeds.com) in Unknown on line 0
+[02-Jul-2018 12:12:24 UTC] PHP Warning:  Unknown: failed to open stream: Operation not permitted in Unknown on line 0
+[02-Jul-2018 12:12:24 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/m1rgv5qz72o0/public_html/work/mail.php' (include_path='.:/opt/alt/php71/usr/share/pear') in Unknown on line 0
+[02-Jul-2018 12:15:16 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/m1rgv5qz72o0/public_html/work/mail.php) is not within the allowed path(s): (G:\PleskVhosts\walkneeds.com\myshoperoochat.walkneeds.com) in Unknown on line 0
+[02-Jul-2018 12:15:16 UTC] PHP Warning:  Unknown: failed to open stream: Operation not permitted in Unknown on line 0
+[02-Jul-2018 12:15:16 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/m1rgv5qz72o0/public_html/work/mail.php' (include_path='.:/opt/alt/php71/usr/share/pear') in Unknown on line 0
+[15-Jul-2018 09:00:27 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/m1rgv5qz72o0/public_html/work/mail.php) is not within the allowed path(s): (G:\PleskVhosts\walkneeds.com\myshoperoochat.walkneeds.com) in Unknown on line 0
+[15-Jul-2018 09:00:27 UTC] PHP Warning:  Unknown: failed to open stream: Operation not permitted in Unknown on line 0
+[15-Jul-2018 09:00:27 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/m1rgv5qz72o0/public_html/work/mail.php' (include_path='.:/opt/alt/php71/usr/share/pear') in Unknown on line 0
+[15-Jul-2018 15:53:42 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/m1rgv5qz72o0/public_html/work/mail.php) is not within the allowed path(s): (G:\PleskVhosts\walkneeds.com\myshoperoochat.walkneeds.com) in Unknown on line 0
+[15-Jul-2018 15:53:42 UTC] PHP Warning:  Unknown: failed to open stream: Operation not permitted in Unknown on line 0
+[15-Jul-2018 15:53:42 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/m1rgv5qz72o0/public_html/work/mail.php' (include_path='.:/opt/alt/php71/usr/share/pear') in Unknown on line 0
+[15-Jul-2018 19:57:47 UTC] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/m1rgv5qz72o0/public_html/work/mail.php) is not within the allowed path(s): (G:\PleskVhosts\walkneeds.com\myshoperoochat.walkneeds.com) in Unknown on line 0
+[15-Jul-2018 19:57:47 UTC] PHP Warning:  Unknown: failed to open stream: Operation not permitted in Unknown on line 0
+[15-Jul-2018 19:57:47 UTC] PHP Fatal error:  Unknown: Failed opening required '/home/m1rgv5qz72o0/public_html/work/mail.php' (include_path='.:/opt/alt/php71/usr/share/pear') in Unknown on line 0
+[31-Oct-2018 09:27:12 UTC] PHP Notice:  Undefined index: msg in /home/m1rgv5qz72o0/public_html/work/mail.php on line 3
+[31-Oct-2018 09:27:12 UTC] PHP Notice:  Undefined index: from in /home/m1rgv5qz72o0/public_html/work/mail.php on line 4

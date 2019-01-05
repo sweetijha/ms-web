@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+        <link rel="apple-touch-icon" href="images/logo.png">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>MyShoperoo</title>
+        <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+<link rel="manifest" href="manifest.json" />
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-theme.min.css">
+
+        <!-- Custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <style>
+
+        @media screen and (max-width: 991px){
+		header.fixed {
+		    height: 125px;
+		}
+	}
+
+          .padding-leftright-null,body{
+            background: white;
+          }
+          header{
+            box-shadow: 2px 2px 2px 2px lightgray;
+          }
+          .how-app-works{
+            position: relative;
+            z-index: 100;
+            width: 100%;
+            text-align: center;
+          }
+          .how-app-works span{
+            cursor: pointer;
+          }
+          .phone_placeholder{
+            position: absolute;
+            padding: 10px;
+            top: 1px;
+          }
+        </style>
+
+    </head>
+    <body onload="loadFun()">
+
+        <!--  loader  -->
+        <div id="myloader">
+            <span class="loader">
+                <img src="assets/img/logo.png" class="normal" alt="logo">
+                <img src="assets/img/logo.png" class="retina" alt="logo">
+            </span>
+        </div>
+
+        <!--  Main Wrap  -->
+        <div id="main-wrap">
+            <!--  Header & Menu  -->
+            <header id="header" class="fixed">
+				<div class="container  no_padding">
+					<div class="row">
+						<div class="col-md-12  no_padding">
+							<nav class="navbar navbar-default">
+								<div class="container  no_padding">
+									<div class="col-md-12  no_padding">
+									<!--  Header Logo  -->
+									<div class=" col-md-6">
+									<div id="logo">
+										<a class="navbar-brand" href="home.html">
+											<img src="assets/img/logo.png" class="normal" alt="logo">
+
+										</a>
+									</div>
+									</div>
+									<!--  END Header Logo  -->
+									<!--  Classic menu, responsive menu Sidemenu  -->
+
+									<div id="sidemenu1">
+										<div class="menu-holder col-md-4">
+											<aside class="sidebar">
+											<div class="widget-wrapper">
+												<div class="login_number">
+												<a href="#">Questions? Call/SMS: 1-855-546-7376</a>
+												</div>
+											</div>
+											</aside>
+
+										</div>
+									</div>
+									<!--  Classic menu, responsive Menu Sidemenu  -->
+									</div>
+								</div>
+								</nav>
+						</div>
+					</div>
+				</div>
+            </header>
+            <!--  END Header & Menu  -->
+
+
+            <!--  Page Content, class footer-fixed if footer is fixed  -->
+            <div id="page-content" class="header-static footer-fixed">
+                <!--  Slider  -->
+
+                <!--  END Slider  -->
+                <div id="home-wrap" class="content-section fullpage-wrap">
+
+                    <div class="row margin-leftright-null">
+
+                        <div class="col-md-12 padding-leftright-null">
+                            <div class="text padding-md-top-null container">
+
+								<div class="fields_auto" id="user_login" >
+                  <div class=""style="margin-bottom:10px">
+
+
+                  <!-- <div class="how-app-works">
+                    <span data-toggle="modal" id="intro-modal">Start Here: Service Intro</span>
+                  </div>
+
+                  <div class="how-app-works">
+                    <span data-toggle="modal" data-target="#faq-modal">FAQs</span>
+                  </div>
+
+                  <div class="how-app-works">
+                    <span data-toggle="modal" id="guide-modal">App User Guide</span>
+                  </div> -->
+                  <div class="how-app-works">
+                    <a href="https://itunes.apple.com/us/app/myshoperoo/id1446536986?ls=1&mt=8" target="_blank"><img src="./images/appstore.png" alt="" class="app-icon"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.myshoperoo" target="_blank"><img src="./images/playstore.png" alt="" class="app-icon"></a>
+                  </div>
+
+
+                  <div class="how-app-works" style="padding-top:10px;color:black;">
+                    <span data-toggle="modal" id="guide-modal"><strong>Desktop Version</strong></span>
+                  </div>
+                  </div>
+									<form id="contact-form" class="padding-md-topbottom-null login-form-submit" action="javascript:void(0)">
+										<div class="row">
+
+											<div class="col-md-12">
+                        <span class="phone_placeholder">+1</span>
+												<input class="form-field1" name="name" id="phone" type="text" placeholder="Mobile Number (1234567890)" style="padding-left:28px;" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');this.value=this.value.length>10?this.value.slice(0, -1):this.value;">
+											</div>
+											<div class="col-md-12">
+												<input class="form-field1" name="mail" id="password" type="password" placeholder="Password">
+											</div>
+                      <input type="submit" name="" value="" style="display:none;">
+											<div class="col-md-12">
+												<a id="submit-contact" class="btn-alt active form-field1 shadow login_submit" >Login</a>
+												<div id="msg" class="message">
+                      </div>
+
+											</div>
+										</div>
+									</form>
+									<div class="center_auto row">
+
+									<div class="col-md-6 newuser_login cursor_p">
+									New User
+									</div>
+                  <div class="col-md-6 forgot_pass cursor_p">
+                    Forgot Password
+                  </div>
+									</div>
+								</div>
+                <div class="how-app-works">
+                  <span data-toggle="modal" data-target="#faq-modal" class="faq-style">FAQs</span>
+                </div>
+								<div class="fields_auto" id="newuser_login">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null newuserregistrationform" action="javascript:void(0)">
+										<div class="row">
+                     <div class="col-md-12">
+												<input class="form-field1" id="reg-name" type="text" placeholder="Full Name">
+											</div>
+											<div class="col-md-12">
+                        <span class="phone_placeholder">+1</span>
+												<input for="username" class="form-field1" name="username" id="reg-phone" autosave="on" type="text" placeholder="Mobile Number (1234567890)" disabled style="padding-left:28px;" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');this.value=this.value.length>10?this.value.slice(0, -1):this.value;">
+											</div>
+											<div class="col-md-12">
+												<input class="form-field1" name="emailId" id="reg-email" type="email" placeholder="Email ID">
+											</div>
+											<div class="col-md-12">
+												<input class="form-field1 hidePassword" name="password" id="reg-password" type="text" placeholder="Password">
+                      </div>
+
+                      <div class="col-md-12">
+                        <input class="form-field3" name="company_code" id="company_code" type="text" placeholder="Company Code*"  oninput="this.value=this.value.replace(/[^a-z0-9]/i,'');this.value=this.value.length>3?this.value.slice(0, -1):this.value;">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <input class="form-field3" name="unique_code" id="unique_code" type="text" placeholder="Unique Code*" oninput="this.value=this.value.replace(/[^a-z0-9]/i,'');this.value=this.value.length>5?this.value.slice(0, -1):this.value;">
+                      </div>
+											<div class="col-md-12"><div class="form-field4"> <span>*</span> These are optional fields.</div> </div>
+											<input type="submit" style="display:none;">
+											<div class="col-md-12">
+
+												<a id="submit-contact" class="btn-alt active form-field1 shadow reg-submit">Submit</a>
+												<div id="msg" class="message"></div>
+
+											</div>
+										</div>
+									</form>
+									<div class="center_auto">
+										<div class="col-md-6 forgot_pass cursor_p">
+											Forgot Password
+										</div>
+										<div class="col-md-6 user_login cursor_p">
+											Login
+										</div>
+									</div>
+								</div>
+
+								<div class="fields_auto" id="forgot_pass">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null sendOTPFunction" action="javascript:void(0)">
+										<div class="row">
+
+											<div class="col-md-12">
+                        <span class="phone_placeholder">+1</span>
+												<input class="form-field1"  id="get-otp-phone" type="text" placeholder="Mobile Number (1234567890)" style="padding-left:28px;" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');this.value=this.value.length>10?this.value.slice(0, -1):this.value;">
+											</div>
+											<div class="col-md-12">
+												<input type="button" id="submit-contact" class="btn-alt active form-field1 shadow go_otp" value="Get Verification Code">
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+									<div class="center_auto">
+										<div class="col-md-6 newuser_login cursor_p">
+										Signup
+										</div>
+										<div class="col-md-6 user_login cursor_p">
+											Login
+										</div>
+									</div>
+								</div>
+
+								<div class="fields_auto" id="enter_opt">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null forEnterOtpButton" action="javascript:void(0)">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="for-otp" type="text" placeholder="Enter Verification Code">
+											</div>
+											<div class="col-md-12">
+												<input type="button" id="submit-contact" class="btn-alt active form-field1 shadow for_enter_otp_button" value="Submit">
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+								</div>
+
+
+
+                <div class="fields_auto" id="reg_forgot_pass">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null registrationSendOtp" action="javascript:void(0)">
+										<div class="row">
+
+											<div class="col-md-12">
+                        <span class="phone_placeholder">+1</span>
+												<input class="form-field1"  id="reg-get-otp-phone" type="text" placeholder="Mobile Number (1234567890)" style="padding-left:28px;" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');this.value=this.value.length>10?this.value.slice(0, -1):this.value;">
+											</div>
+											<div class="col-md-12">
+												<input type="button" id="submit-contact" class="btn-alt active form-field1 shadow reg_go_otp" value="Get Verification Code">
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+									<div class="center_auto">
+										<!--<div class="col-md-6 newuser_login cursor_p">
+											New User
+										</div>-->
+										<div class="col-md-6 user_login cursor_p" style="text-align:center;width:100%;margin:auto">
+											Login
+										</div>
+									</div>
+								</div>
+
+								<div class="fields_auto" id="reg_enter_opt">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null regEnterOtpButton" action="javascript:void(0)">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="reg-enter-otp" type="text" placeholder="Enter Verification Code" oninput="this.value=this.value.replace(/[^0-9]/g,'');this.value=this.value.length>6?this.value.slice(0, -1):this.value;">
+											</div>
+											<div class="col-md-12">
+												<input type="button" id="submit-contact" class="btn-alt active form-field1 shadow reg_enter_otp_button" value="Submit">
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+								</div>
+
+								<div class="fields_auto" id="forgotPass_opt">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null changepasswordfunction" action="javascript:void(0)">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="for-password" type="password" placeholder="Enter New Password">
+											</div>
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="for-conf-password" type="password" placeholder="Confirm New Password">
+											</div>
+											<div class="col-md-12">
+												<a id="submit-contact" class="btn-alt active form-field1 shadow change_password" >Submit</a>
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+								</div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--  Main Wrap  -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- All js library -->
+        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+
+        <script src="assets/js/imagesloaded.min.js"></script>
+        <script src="assets/js/pace.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <script>
+
+        if(localStorage.loginData){
+          window.location.href = 'home.html';
+        }
+        function loadFun(){
+          $.get( "./faq.json", function( data ) {
+            // console.log(JSON.stringify(data));
+            var tempHtml = '';
+            for(var i=0;i<data.faq.length;i++){
+              tempHtml += '<h4>'+data.faq[i].heading+'</h4><div class="faq-card">';
+              console.log(data.faq[i].questions.length);
+              for(var j=0;j<data.faq[i].questions.length;j++){
+                tempHtml += '<div class="faq-heading" data-toggle="collapse" data-target="#demo'+i+'-'+j+ '" >'+data.faq[i].questions[j].question+'</div><div id="demo'+i+'-'+j+'" class="collapse" style="padding: 5px 10px;border-bottom: 3px solid lightgray;">'+data.faq[i].questions[j].answer+'</div>';
+              }
+              tempHtml += '</div>';
+            }
+
+            $('.faqs').html(tempHtml);
+          });
+        }
+
+ $(document).ready(function () {
+   $('#intro-modal').click(function(){
+     $('#intro-video').attr('src','https://player.vimeo.com/video/278561340');
+    $('#video-modal').modal('show');
+   })
+   $('#close-intro-video').click(function(){
+     $('#intro-video').attr('src','');
+    $('#video-modal').modal('hide');
+   })
+   $("#video-modal").on("hidden.bs.modal", function () {
+     $('#intro-video').attr('src','');
+     $('#video-modal').modal('hide');
+  });
+
+
+  $('#guide-modal').click(function(){
+    $('#guide-video').attr('src','https://player.vimeo.com/video/278556739');
+   $('#other-video-modal').modal('show');
+  })
+  $('#close-guide-video').click(function(){
+    $('#guide-video').attr('src','');
+   $('#other-video-modal').modal('hide');
+  })
+  $("#other-video-modal").on("hidden.bs.modal", function () {
+    $('#guide-video').attr('src','');
+    $('#other-video-modal').modal('hide');
+ });
+     // $("#phone, #reg-phone, #get-otp-phone, #reg-get-otp-phone").keypress(function() {
+     //    if (this.value.length > 10) {
+     //        return false;
+     //    }
+     //  });
+ });
+
+ // forceNumeric() plug-in implementation
+ jQuery.fn.forceNumeric = function () {
+     return this.each(function () {
+         $(this).keydown(function (e) {
+             var key = e.which || e.keyCode;
+             // alert(key);
+
+             if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+             // numbers
+                 key >= 48 && key <= 57 ||
+             // Backspace and Tab and Enter
+                key == 8 || key == 9 || key == 13 ||
+             // left and right arrows
+                key == 37 || key == 39 ||
+             // Del and Ins
+                key == 46 || key == 45 ||
+                key !=229)
+                 return true;
+
+             return false;
+         });
+     });
+ }
+
+    		</script>
+
+
+    <div id="video-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <iframe id="intro-video" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="close-intro-video">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="other-video-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <iframe id="guide-video" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="close-guide-video">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <div id="faq-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="" data-toggle="collapse" data-target="#demo">
+          ABCD
+        </div>
+        <div id="demo" class="collapse">
+          Lorem ipsum dolor text....
+        </div>
+      </div>
+    </div> -->
+
+    <style>
+      .faqs{
+        height: 500px;
+        overflow: auto;
+      }
+      .faqs .faq-heading{
+        /* border: 3px solid lightgray; */
+        border-bottom: 3px solid lightgray;
+        padding: 5px;
+      }
+      .faqs .faq-card{
+        border: 3px solid lightgray;
+        border-bottom: 0;
+      }
+      /* .faqs .faq-card .faq-heading:last-child{
+        border-bottom: 3px solid lightgray !important;
+      } */
+      .faqs ul{
+        list-style: disc;
+        padding-left: 30px;
+      }
+
+    </style>
+    <div id="faq-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">FAQ's</h4>
+          </div>
+          <div class="modal-body faqs">
+            <!-- <h4>Placing an Order</h4>
+            <div class="faq-heading" data-toggle="collapse" data-target="#demo1" style="padding: 10px;border: 3px solid lightgray;">
+              What is the deadline for placing an order?
+            </div>
+            <div id="demo1" class="collapse" style="padding: 5px 10px;border: 2px solid lightgray;">
+              We work hard to process all orders placed by 1 pm and aim to deliver by 4 pm same day, at your office location. If you advise any changes after 1 pm, we will communicate back the expected delivery date. If an item is not available in stock or we could not pick it on time, we will continue to follow up with you and merchant, until you are satisfied by the outcome.
+            </div>
+
+
+            <div class="faq-heading" data-toggle="collapse" data-target="#demo" style="padding: 10px;border: 3px solid lightgray;border-bottom:3px solid lightgray !important;">
+              Can I place multiple tasks or orders for the same day?
+            </div>
+            <div id="demo" class="collapse" style="padding: 5px 10px;border: 2px solid lightgray;">
+              You can only place one order any given day. To serve all employee requests fairly, we advise you to type one shopping task and submit it as the “order” for that day. If you record multiple tasks for a day, please prioritize and move other tasks for future days. You can also go ahead, place the order for any future days right away without having to wait.
+            </div>
+
+            <h4 style="margin-top:20px;">Costs</h4>
+            <div class="faq-heading" data-toggle="collapse" data-target="#demo2" style="padding: 10px;border: 3px solid lightgray;">
+              How much does it cost to use the service?
+            </div>
+            <div id="demo2" class="collapse" style="padding: 5px 10px;border: 2px solid lightgray;">
+              There is no absolute cost for our service during the pilot. Post pilot, your employer will advise you of the cost for using this service.
+            </div>
+
+
+
+            <div class="faq-heading" data-toggle="collapse" data-target="#demo3" style="padding: 10px;border: 3px solid lightgray;border-bottom:3px solid lightgray !important;">
+              How will I pay for the products you deliver?
+            </div>
+            <div id="demo3" class="collapse" style="padding: 5px 10px;border: 2px solid lightgray;">
+              You can pay for the products we deliver in any of the below options:
+              <ul style="padding-left: 20px;list-style: disc;">
+                <li>Cash, at par, based on the final price that is on merchant receipt.</li>
+                <li>Domestic Bank Check, at par.</li>
+                <li>Credit cards, at 2.75% credit card processing fee (we use Square currently and this is the same fee they charge us, post pilot, we are working on reducing this further).</li>
+              </ul>
+              We request you to pay us in of the above choice, on the same day of delivery.
+
+            </div> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </body>
+    <script>
+    </script>
+</html>

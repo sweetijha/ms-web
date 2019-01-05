@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>ADMIN | MyShoperoo</title>
+  <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+  <link rel="manifest" href="manifest.json" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-theme.min.css">
+
+  <!-- Custom css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/jquery-ui.css" />
+
+  <style>
+
+    @media screen and (max-width: 991px) {
+      header.fixed {
+        height: 125px;
+      }
+    }
+    #caledar_reminder{
+      width: calc(49% - 30px);
+      left: calc(20px + 1%);
+    }
+    .sidebar {
+      margin: 0;
+      width: 200px;
+      background-color: white;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+      box-shadow: 0px 0px 5px 2px #b9b8b8 !important;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #555;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .sidebar a.active {
+      background-color: #90603f !important;
+      color: white;
+    }
+
+    .sidebar a:hover:not(.active) {
+      color: #90603f !important;
+    }
+
+    .phone_placeholder {
+      position: absolute;
+      padding: 10px;
+      top: 1px;
+    }
+
+    div.content {
+      margin-left: 200px;
+      padding: 1px 16px;
+      height: 100vh;
+      padding-top: 160px;
+      background: white;
+      ;
+    }
+    div.content1 {
+      margin-left: 200px;
+      padding: 1px 16px;
+      padding-top: 10px;
+      background: white;
+      ;
+    }
+    #send_draft_sms{
+      width: 48%;
+      float: left;
+      margin: 1%;
+    }
+    #send_ordered_sms{
+      width: 48%;
+      float: right;
+      margin: 1%;
+    }
+    @media screen and (max-width: 700px) {
+      #caledar_reminder{
+        width: calc(99% - 40px);
+        left: calc(20px + 1%);
+      }
+      #send_draft_sms{
+        width: 100%;
+        float : unset;
+      }
+      #send_ordered_sms{
+        width: 100%;
+        float : unset;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {
+        float: left;
+      }
+      div.content {
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+
+    @media(max-width: 340px) {
+      .ui-datepicker {
+        width: 14em !important;
+      }
+    }
+
+    #alert-modal .modal-footer {
+      padding: 5px;
+      padding-right: 5px;
+      border: none;
+      padding-right: 15px;
+    }
+  </style>
+  <style>
+    .Highlighted a {
+      background-color: #90603f !important;
+      background-image: none !important;
+      color: White !important;
+      font-weight: bold !important;
+      font-size: 12pt;
+    }
+  </style>
+</head>
+
+<body>
+<div id="company_code1" style="display:none;"></div>
+  <div class="sidebar" style="z-index:999">
+    <div style="height: 110px;width: 200px;"><img src="assets/img/logo_big.png" class="normal" style="height: 110px;padding: 4px;padding-left: 36px;" alt="logo"></div>
+    <div><a id="userClick">Create Code</a></div>
+    <div><a id="orderClick">Order Management</a></div>
+    <div><a id="reminderClick">Reminder</a></div>
+    <div><a class="log-out">Log Out</a></div>
+  </div>
+  <div class="content1" id="content1"></div>
+  <div class="content" id="content">
+
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="assets/js/plugins-scroll.js"></script>
+  <script src="assets/js/imagesloaded.min.js"></script>
+  <script src="assets/js/pace.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- All js library -->
+  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <style media="screen">
+    .draft_class{
+      text-align: center;
+      height: 100px;
+      align-content: center;
+      display: grid;
+      background: #90603f;
+      color: white;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: calc(100% - 20px);
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .ordered_class{
+      text-align: center;
+      height: 100px;
+      align-content: center;
+      display: grid;
+      background: #90603f;
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: calc(100% - 20px);
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+
+      $('#orderClick').click(function () {
+        window.location.href = 'dashboard.html?order';
+
+      })
+      $('#userClick').click(function () {
+        window.location.href = 'dashboard.html?create-user-id';
+      })
+    $('#reminderClick').click(function () {
+      window.location.href = 'dashboard.html?reminder';
+      })
+    })
+    function viewCustomerUi() {
+      $('#content').html(`
+                    <div class="col-md-12 col-xs-12" style="background:white;z-index:999">
+                        <div class="col-md-12 col-xs-12">
+                          <div>
+                            <ul class="status">
+                              <li>
+                                <span style="color:rgb(255, 242, 204)">●</span><span>Draft</span>
+                              </li>
+                              <li>
+                                <span style="color:rgb(217, 234, 211)">●</span><span>Saved</span>
+                              </li>
+                              <li>
+                                <span style="color:rgb(207, 226, 243);">●</span><span>Update</span>
+                              </li>
+                              <li>
+                                <span style="color:rgb(244, 204, 204);">●</span><span>Ordered</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <div id="page-content" class="header-static footer-fixed">
+                      <div id="home-wrap" class="content-section fullpage-wrap">
+                        <div class="row margin-leftright-null">
+                          <div class="col-md-12 padding-leftright-null">
+                            <div class="text padding-md-top-null">
+                                <form id="contact-form">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <textarea class="form-field shopping_list" name="messageForm" id="messageForm" rows="6" placeholder="Enter your shopping list here, until 1 pm of any given day." style="padding-bottom: 70px;"></textarea>
+                                      </div>
+                                    </div>
+                                </form>
+						  <footer class="footer_sec">
+							  <div class="row">
+								  <div class="col-xs-6 col-sm-6 col-md-6" id="save_button" onclick="saveList()">
+									  <ul class="sitemap">
+										  <li class="f_img"><a>
+                        <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                        <label for="" id="save_label"></label>
+                        </a>
+                      </li>
+							      </ul>
+							    </div>
+							    <div class="col-xs-6 col-sm-6 col-md-6 order" id="order_button" onclick="orderList()">
+									  <ul class="info">
+										  <li class="f_img"><a>
+                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                          <label for="" id="order_label"></label>
+                            </a>
+                        </li>
+									  </ul>
+								  </div>
+                </div>
+              </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                       `);
+      setTimeout(function () {
+        loadPage();
+        $("#caledar").datepicker({
+          numberOfMonths: 1,
+          // minDate:-0,
+          dateFormat: "dd-M-yy",
+          onSelect: function (dateText) {
+            getShoppingList();
+          }
+        });
+      }, 10);
+    }
+    function orderByAdmin(phone) {
+      if (phone.length == 10) {
+        $.post("https://api.myshoperoo.com/public/customer_login_by_admin",
+          {
+            phone: $('#customerphone').val(),
+          },
+          function (data, status) {
+            if (data.error) {
+              alert(data.message);
+            } else {
+              console.log(data.data);
+              viewCustomerUi();
+              $('#currentName').html(data.data.name);
+              $('#customeremail').html(data.data.email_id);
+               $('#company_code1').html(data.data.company_code);
+              $('#customerphoneno').html($('#customerphone').val());
+              // window.open("home.html?phone="+document.getElementById('customerphone').value+"&name="+data.data.name+"&email="+data.data.email_id,'_blank')
+
+            }
+          });
+      }
+      else {
+        $('#currentName').html("");
+        $('#customeremail').html("");
+        $('#customerphoneno').html("");
+        $('#content').html(`
+                        <div>Enter Customer Phone Number To Order On His/her Behalf.</div>
+                      `)
+      }
+    }
+  </script>
+  <script>
+                if (!localStorage.adminloginData) {
+                  window.location.href = 'index.html';
+                }
+                $('.log-out').click(function () {
+                  localStorage.clear();
+                  window.location.href = 'index.html';
+                })
+  </script>
+  <script>
+                $('#chat_iframe_a').click(function () {
+                  setTimeout(function () {
+
+                    var ifr = document.getElementById('chat-iframe');
+                    ifr.src = ifr.src;
+                  }, 0);
+                });
+
+                $('textarea').click(function () {
+                  window.scroll({
+                    top: 160,
+                    left: 0,
+                    behavior: 'smooth'
+                  });
+                });
+                $("#sendmail").click(function () {
+                  $.get("./mail.php", function (data, status) {
+                    // alert("Your Order is Placed Successfully");
+                    $('#alert-modal').modal('show');
+                  });
+                });
+                var days = ["Sun", "Mon", "TUE", "Wed", "Thu", "Fri", "Sat"];
+                var months_va = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
+                $(document).ready(function () {
+
+
+                  $('textarea').css("min-height", "calc(100vh - " + parseInt($('header').height() + $('.footer_sec').height() + 50) + 'px)');
+                  $('textarea').css("height", "calc(100vh - " + parseInt($('header').height() + $('.footer_sec').height() + 50) + 'px)');
+                  // $("#caledar").datepicker({
+                  //   beforeShowDay: function() {
+                  //       var Highlight = new Date('07/07/2018');
+                  //       if (Highlight) {
+                  //           return [true, "Highlighted", Highlight];
+                  //       }
+                  //       else {
+                  //           return [true, '', ''];
+                  //       }
+                  //   }
+                  // });
+
+
+                });
+                function getShoppingList() {
+                  // var userFetcheddata = {};
+                  // var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                  //   userFetcheddata[key] = value;
+                  // });
+                  // console.log(userFetcheddata);
+                  $('#order_label').html('Order');
+                  // $('#save_label').html('Save');
+                  //var loginData = JSON.parse(localStorage.loginData);
+                  $.post("https://api.myshoperoo.com/public/get_order",
+                    {
+                      date: $('#caledar').val(),
+                      phone: $('#customerphoneno').html(),
+                      is_admin: 1
+                    },
+                    function (data, status) {
+
+                      if (data.error) {
+                        $('textarea').css('background-color', '#fff2cc');
+                        $('.shopping_list').val('');
+                        $('#save_label').html('Save');
+                        if (data.disable) {
+                          $('#save_button a').css('color', '#9f9f9f');
+                          $('#order_button a').css('color', '#9f9f9f');
+                          $('#order_button').attr('disabled', 'disabled');
+                          $('#save_button').attr('disabled', 'disabled');
+                          $('textarea').prop('disabled', true);
+                        } else {
+                          $('#save_button a').css('color', 'white');
+                          $('#order_button a').css('color', 'white');
+                          $('#order_button').removeAttr('disabled');
+                          $('#save_button').removeAttr('disabled');
+                          $('textarea').prop('disabled', false);
+                        }
+                      } else {
+                        $('.shopping_list').val(data.data.shopping_list);
+                        switch (data.data.status) {
+                          case 'save':
+                            $('textarea').css('background-color', '#d9ead3');
+                            $('#save_label').html('Save');
+                            if (data.disable) {
+                              $('#save_button a').css('color', '#9f9f9f');
+                              $('#order_button a').css('color', '#9f9f9f');
+                              $('#order_button').attr('disabled', 'disabled');
+                              $('#save_button').attr('disabled', 'disabled');
+                              $('textarea').prop('disabled', true);
+                            } else {
+                              $('#save_button a').css('color', 'white');
+                              $('#order_button a').css('color', 'white');
+                              $('#order_button').removeAttr('disabled');
+                              $('#save_button').removeAttr('disabled');
+                              $('textarea').prop('disabled', false);
+                            }
+                            break;
+                          case 'ordered':
+                            $('textarea').css('background-color', '#f4cccc');
+                            $('#save_label').html('Update');
+                            if (data.disable) {
+                              $('#save_button a').css('color', '#9f9f9f');
+                              $('#order_button a').css('color', '#9f9f9f');
+                              $('#order_button').attr('disabled', 'disabled');
+                              $('#save_button').attr('disabled', 'disabled');
+                              $('textarea').prop('disabled', true);
+                            } else {
+                              $('#save_button a').css('color', 'white');
+                              $('#order_button a').css('color', 'white');
+                              $('#order_button').removeAttr('disabled');
+                              $('#save_button').removeAttr('disabled');
+                              $('textarea').prop('disabled', true);
+                            }
+                            break;
+                          case 'update':
+                            $('textarea').css('background-color', '#cfe2f3');
+                            $('#save_label').html('Save');
+                            if (data.disable) {
+                              $('#save_button a').css('color', '#9f9f9f');
+                              $('#order_button a').css('color', '#9f9f9f');
+                              $('#order_button').removeAttr('id');
+                              $('#save_button').attr('disabled', 'disabled');
+                              $('textarea').prop('disabled', true);
+                            } else {
+                              $('#save_button a').css('color', 'white');
+                              $('#order_button a').css('color', 'white');
+                              $('#order_button').removeAttr('disabled');
+                              $('#save_button').removeAttr('disabled');
+                              $('textarea').prop('disabled', false);
+                            }
+                            break;
+                        }
+                      }
+
+
+
+                    });
+                }
+                function orderList() {
+                if(confirm('Perform Order on '+$('#customerphoneno').html()+' on '+$('#caledar').val())){
+                  $.post("https://api.myshoperoo.com/public/add_order",
+                    {
+                      date: $('#caledar').val(),
+                      phone: $('#customerphoneno').html(),
+                      name: $('#currentName').html(),
+                      email: $('#customeremail').html(),
+                      shopping_list: $('.shopping_list').val(),
+                      status: 'ordered',
+                      is_admin: 1
+                    },
+                    function (data, status) {
+                      if (data.error) {
+                        // alert(data.message);
+                        $('#save-order-alert-modal .modal-body').html(data.message);
+                        $('#save-order-alert-modal').modal('show');
+                      } else {
+                        sendmail();
+                        //sendsms();
+                        getShoppingList();
+                      }
+                    });
+                }
+                }
+                function sendmail() {
+                  $.post("https://api.myshoperoo.com/public/send_mail",
+                    {
+                      msg: $('.shopping_list').val(),
+                      email: $('#customeremail').html(),
+                      name: $('#currentName').html(),
+                      phone: $('#customerphoneno').html(),
+                      company_code:$('#company_code1').html(),
+                      date: $('#caledar').val()
+
+                    },
+                    function (data, status) {
+                      $('#alert-modal').modal('show');
+                    });
+                }
+                function saveList() {
+                  if ($('#save_label').html() == 'Update') {
+                    $.post("https://api.myshoperoo.com/public/add_order",
+                      {
+                        date: $('#caledar').val(),
+                        phone: $('#customerphoneno').html(),
+                        name: $('#currentName').html(),
+                        email: $('#customeremail').html(),
+                        shopping_list: $('.shopping_list').val(),
+                        status: 'update',
+                        is_admin: 1
+                      },
+                      function (data, status) {
+                        if (data.error) {
+                          $('textarea').prop('disabled', true);
+                          $('#save-order-alert-modal .modal-body').html(data.message);
+                          $('#save-order-alert-modal').modal('show');
+                          $('#save_label').html('Update');
+                        } else {
+                          getShoppingList();
+                          $('textarea').prop('disabled', false);
+                          $('#save_label').html('Save');
+                        }
+                      });
+                  } else {
+                  if(confirm('Perform Save on '+$('#customerphoneno').html()+' on '+$('#caledar').val())){
+                    $.post("https://api.myshoperoo.com/public/add_order",
+                      {
+                        date: $('#caledar').val(),
+                        phone: $('#customerphoneno').html(),
+                        name: $('#currentName').html(),
+                        email: $('#customeremail').html(),
+                        shopping_list: $('.shopping_list').val(),
+                        status: 'save',
+                        is_admin: 1
+                      },
+                      function (data, status) {
+                        if (data.error) {
+                          $('#save-order-alert-modal .modal-body').html(data.message);
+                          $('#save-order-alert-modal').modal('show');
+                        } else {
+                          getShoppingList();
+                        }
+                      });
+                  }
+                  }
+                }
+                var currentDate;
+                function loadPage() {
+                  $.get("https://api.myshoperoo.com/public/check_date_time",
+                    function (data, status) {
+                      currentDate = new Date(data.year, data.month, data.date, data.hour, data.minute, data.second, 0);
+                      var day = currentDate.getDay();
+                      var date = currentDate.getDate() < 10 ? '0' + currentDate.getDate() : currentDate.getDate();
+                      var month = currentDate.getMonth(); //Be careful! January is 0 not 1
+                      var year = currentDate.getFullYear();
+
+
+                      var dateString = date + "-" + data.month_in_word + "-" + year;
+                      console.log(dateString);
+                      $('#caledar').val(dateString);
+                      getShoppingList();
+                    });
+                }
+
+                function createCode(sendmailConfirmation) {
+                var email=document.getElementById("work_email");
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if (re.test(email.value) == false){
+                	alert('Enter Valid Email Address');
+                	$('#work_email').val('');
+                }
+                else{
+                  $.post("https://api.myshoperoo.com/public/createCode",
+                    {
+                  company_code: ($('#company_code').val()?($('#company_code').val()).toUpperCase():$('#company_code').val()),
+                  Unique_code: ($('#emp_code').val()?($('#emp_code').val()).toUpperCase():$('#emp_code').val()),
+                  work_email: $('#work_email').val(),
+                  mailOrNot:sendmailConfirmation
+                    },
+                    function (data, status) {
+                      if (data.error) {
+                        alert(data.message);
+                      } else {
+                        alert(data.message);
+                        $('#company_code').val('');
+                        $('#emp_code').val('');
+                        $('#work_email').val('');
+                      }
+                    });
+                }
+                }
+  </script>
+  <div id="alert-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="position: relative;top: 30%;font-size: 12px;">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="position: relative;width: 75%;left:15%;">
+        <div class="modal-body">
+          Your Order is Placed Successfully
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="save-order-alert-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="position: relative;top: 30%;font-size: 12px;">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="position: relative;width: 75%;left:15%;">
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

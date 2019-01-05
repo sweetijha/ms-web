@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>MyShoperoo| App </title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-theme.min.css">
+
+        <!-- Custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <link  rel="stylesheet" href="css/jquery-ui.css"/>
+    </head>
+    <body>
+
+        <!--  loader  -->
+        <div id="myloader">
+            <span class="loader">
+                <img src="assets/img/logo.png" class="normal" alt="logo">
+                <img src="assets/img/logo.png" class="retina" alt="logo">
+            </span>
+        </div>
+
+        <!--  Main Wrap  -->
+        <div id="main-wrap">
+            <!--  Header & Menu  -->
+            <header id="header" class="fixed">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<nav class="navbar navbar-default">
+								<div class="container">
+									<div class="col-md-12">
+									<!--  Header Logo  -->
+									<div class=" col-md-6">
+									<div id="logo">
+										<a class="navbar-brand" href="index.html">
+											<img src="assets/img/logo.png" class="normal" alt="logo">
+
+										</a>
+									</div>
+									</div>
+									<!--  END Header Logo  -->
+									<!--  Classic menu, responsive menu Sidemenu  -->
+
+									<div id="sidemenu1">
+										<div class="menu-holder col-md-4">
+											<aside class="sidebar">
+											<div class="widget-wrapper">
+												<form class="search-form">
+													<div class="form-input">
+														<input value="" type="text" class="calendar_inut"  id="caledar">
+														<span class="form-button btn_calendar">
+															<button type="button">
+																<i class="fa fa-calendar"></i>
+															</button>
+														</span>
+													</div>
+												</form>
+											</div>
+											</aside>
+
+										</div>
+									</div>
+									<!--  Classic menu, responsive Menu Sidemenu  -->
+									</div>
+								</div>
+								</nav>
+						</div>
+					</div>
+				</div>
+            </header>
+            <!--  END Header & Menu  -->
+
+
+            <!--  Page Content, class footer-fixed if footer is fixed  -->
+            <div id="page-content" class="header-static footer-fixed">
+                <!--  Slider  -->
+
+                <!--  END Slider  -->
+                <div id="home-wrap" class="content-section fullpage-wrap">
+
+                    <div class="row margin-leftright-null">
+
+                        <div class="col-md-12 padding-leftright-null">
+                            <div class="text padding-md-top-null container">
+                                <form id="contact-form" class="padding-md padding-md-topbottom-null">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <textarea class="form-field shopping_list" name="messageForm" id="messageForm" rows="6" placeholder="My Shopping List" style="padding-bottom: 70px;"></textarea>
+
+                                        </div>
+                                    </div>
+                                </form>
+
+								 <!--  Footer. Class fixed for fixed footer  -->
+						<footer class="footer_sec">
+							<div class="row">
+
+								<div class="col-xs-4 col-sm-4 col-md-4" id="save_button">
+
+									<ul class="sitemap">
+										<li class="f_img"><a><img src="images/save.png">
+                      <label for="" id="save_label"></label>
+                    </a></li>
+
+									</ul>
+								</div>
+								<div class="col-xs-4 col-sm-4 col-md-4" id="order_button">
+
+									<ul class="info">
+										<li class="f_img"><a><img src="images/send.png">
+                      <label for="" id="order_label"></label>
+                    </a></li>
+
+									</ul>
+								</div>
+								<div class="col-xs-4 col-sm-4 col-md-4" id="tawkchat-minified-wrapper">
+
+									<ul class="info">
+
+										<li class="f_img"><a data-toggle="modal" data-target="#myModal"><img src="images/chat.png"><label>Chat</label></a></li>
+
+									</ul>
+								</div>
+							</div>
+
+						</footer>
+            <!--  END Footer. Class fixed for fixed footer  -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog" style="height:calc(100% - 100px);">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="width:100%;height:100%;">
+
+              <div class="modal-body" style="width:100%;height:100%;">
+                <i class="fa fa-times" aria-hidden="true" style="padding: 5px;background: #905b35;color: white;position: absolute;right: 20px;top: 24px;" data-dismiss="modal"></i>
+
+                <iframe src="https://tawk.to/chat/5b35aeb3d0b5a54796824973/1ch4tvgst/?$_tawk_popout=true" width="" height="" style="width:100%;height:100%;">
+                  <style>
+                    .embedded #headerBoxControlsContainer{
+                      display: none !important;
+                    }
+                  </style>
+                </iframe>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <!--  Main Wrap  -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- All js library -->
+        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+        <script src="assets/js/plugins-scroll.js"></script>
+        <script src="assets/js/imagesloaded.min.js"></script>
+        <script src="assets/js/pace.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/app.js"></script>
+
+	<script src="js/jquery-ui.js"></script>
+			<script>
+      $("#sendmail").click(function(){
+          $.get("./mail.php", function(data, status){
+              alert("Thanks for order.");
+          });
+      });
+		var days = ["Sun", "Mon", "TUE", "Wed", "Thu", "Fri", "Sat"];
+		var months_va = ["Jan","Feb","Mar","Apr","May","Jun","Jul"];
+		$(document).ready(function(){
+      $('textarea').css("min-height","calc(100vh - "+parseInt($('header').height()+$('.footer_sec').height()+50)+'px)');
+      $('textarea').css("height","calc(100vh - "+parseInt($('header').height()+$('.footer_sec').height()+50)+'px)');
+      // $("#caledar").datepicker({
+      //   beforeShowDay: function() {
+      //       var Highlight = new Date('07/07/2018');
+      //       if (Highlight) {
+      //           return [true, "Highlighted", Highlight];
+      //       }
+      //       else {
+      //           return [true, '', ''];
+      //       }
+      //   }
+			// });
+			$("#caledar").datepicker({
+				numberOfMonths:1,
+				// minDate:-0,
+				dateFormat:"dd-M-yy",
+        onSelect: function(dateText) {
+          getShoppingList();
+        }
+			});
+
+		});
+    function getShoppingList(){
+      var loginData = JSON.parse(localStorage.loginData);
+        $.post("http://api.work.myshoperoo.com/public/get_order",
+        {
+            date: $('#caledar').val(),
+            phone: loginData.phone
+        },
+        function(data, status){
+
+            if(data.error){
+              $('textarea').css('background-color','white');
+              $('.shopping_list').val('');
+              if(data.disable){
+                $('#order_button').attr('disabled', 'disabled');
+                $('#save_button').attr('disabled', 'disabled');
+                $('textarea').prop('disabled', true);
+              }else{
+                $('#order_button').removeAttr('disabled');
+                $('#save_button').removeAttr('disabled');
+                $('textarea').prop('disabled', false);
+              }
+            }else{
+              if(data.disable){
+                $('#order_button').attr('disabled', 'disabled');
+                $('#save_button').attr('disabled', 'disabled');
+                $('textarea').prop('disabled', true);
+              }else{
+                $('#order_button').removeAttr('disabled');
+                $('#save_button').removeAttr('disabled');
+                $('textarea').prop('disabled', false);
+              }
+              $('.shopping_list').val(data.data.shopping_list);
+              switch(data.data.status){
+                case 'save':
+                  $('textarea').css('background-color','yellow');
+                  break;
+                case 'ordered' :
+                  $('textarea').css('background-color','lightgreen');
+                  $('textarea').prop('disabled', true);
+                  $('#order_label').html('Update');
+                  break;
+                case 'update' :
+                  $('textarea').css('background-color','skyblue');
+                  $('textarea').prop('disabled', false);
+                  $('#order_label').html('Order');
+                  break;
+              }
+            }
+
+        });
+    }
+		var currentDate = new Date();
+    var day = currentDate.getDay();
+    var date = currentDate.getDate();
+    var month = currentDate.getMonth(); //Be careful! January is 0 not 1
+    var year = currentDate.getFullYear();
+
+
+    var dateString = date + "-" +months_va[month] + "-" + year;
+		$('#caledar').val(dateString);
+
+	</script>
+  <style>
+    .Highlighted a{
+      background-color : Green !important;
+      background-image :none !important;
+      color: White !important;
+      font-weight:bold !important;
+      font-size: 12pt;
+    }
+  </style>
+
+  <script>
+  if(!localStorage.loginData){
+    window.location.href = 'index.html';
+  }
+  </script>
+
+<!--End of Tawk.to Script-->
+    </body>
+</html>

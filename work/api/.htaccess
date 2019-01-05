@@ -1,0 +1,14 @@
+Options +SymLinksIfOwnerMatch
+RewriteEngine On
+RewriteRule ^ index.php [L]
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Headers "*"
+Header set Access-Control-Allow-Methods "*"
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddType application/x-httpd-ea-php56-lsphp .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+        <link rel="apple-touch-icon" href="images/logo.png">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>MyShoperoo</title>
+        <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+<link rel="manifest" href="manifest.json" />
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-theme.min.css">
+
+        <!-- Custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <style>
+
+        @media screen and (max-width: 991px){
+		header.fixed {
+		    height: 125px;
+		}
+	}
+
+          .padding-leftright-null,body{
+            background: white;
+          }
+          header{
+            box-shadow: 2px 2px 2px 2px lightgray;
+          }
+          .how-app-works{
+            position: relative;
+            z-index: 100;
+            width: 100%;
+            text-align: center;
+          }
+          .how-app-works span{
+            cursor: pointer;
+          }
+          .phone_placeholder{
+            position: absolute;
+            padding: 10px;
+            top: 1px;
+          }
+        </style>
+        <style>
+          .faqs{
+            overflow: auto;
+          }
+          .faqs .faq-heading{
+            /* border: 3px solid lightgray; */
+            border-bottom: 3px solid lightgray;
+            padding: 5px;
+          }
+          .faqs .faq-card{
+            border: 3px solid lightgray;
+            border-bottom: 0;
+          }
+          /* .faqs .faq-card .faq-heading:last-child{
+            border-bottom: 3px solid lightgray !important;
+          } */
+          .faqs ul{
+            list-style: disc;
+            padding-left: 30px;
+          }
+
+        </style>
+    </head>
+    <body onload="loadFun()">
+      <div class="modal-body faqs">
+
+      </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- All js library -->
+        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+
+    </body>
+    <script>
+    function loadFun(){
+      $.get( "./mobile_faq.json", function( data ) {
+        // console.log(JSON.stringify(data));
+        var tempHtml = '';
+        for(var i=0;i<data.faq.length;i++){
+          tempHtml += '<h4>'+data.faq[i].heading+'</h4><div class="faq-card">';
+          console.log(data.faq[i].questions.length);
+          for(var j=0;j<data.faq[i].questions.length;j++){
+            tempHtml += '<div class="faq-heading"><a data-toggle="collapse" data-target="#demo'+i+'-'+j+ '" >'+data.faq[i].questions[j].question+'</a></div><div id="demo'+i+'-'+j+'" class="collapse" style="padding: 5px 10px;border-bottom: 3px solid lightgray;">'+data.faq[i].questions[j].answer+'</div>';
+          }
+          tempHtml += '</div>';
+        }
+
+        $('.faqs').html(tempHtml);
+      });
+    }
+    </script>
+</html>

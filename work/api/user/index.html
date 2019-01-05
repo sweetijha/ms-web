@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>MyShoperoo| App </title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-theme.min.css">
+
+        <!-- Custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <style>
+          .padding-leftright-null,body{
+            background: white;
+          }
+          header{
+            box-shadow: 2px 2px 2px 2px lightgray;
+          }
+        </style>
+
+    </head>
+    <body>
+
+        <!--  loader  -->
+        <div id="myloader">
+            <span class="loader">
+                <img src="assets/img/logo.png" class="normal" alt="logo">
+                <img src="assets/img/logo.png" class="retina" alt="logo">
+            </span>
+        </div>
+
+        <!--  Main Wrap  -->
+        <div id="main-wrap">
+            <!--  Header & Menu  -->
+            <header id="header" class="fixed">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<nav class="navbar navbar-default">
+								<div class="container">
+									<div class="col-md-12">
+									<!--  Header Logo  -->
+									<div class=" col-md-6">
+									<div id="logo">
+										<a class="navbar-brand" href="home.html">
+											<img src="assets/img/logo.png" class="normal" alt="logo">
+
+										</a>
+									</div>
+									</div>
+									<!--  END Header Logo  -->
+									<!--  Classic menu, responsive menu Sidemenu  -->
+
+									<div id="sidemenu1">
+										<div class="menu-holder col-md-4">
+											<aside class="sidebar">
+											<div class="widget-wrapper">
+												<div class="login_number">
+												<a href="#">Live Chat OC: 1-855-546-7376</a>
+												</div>
+											</div>
+											</aside>
+
+										</div>
+									</div>
+									<!--  Classic menu, responsive Menu Sidemenu  -->
+									</div>
+								</div>
+								</nav>
+						</div>
+					</div>
+				</div>
+            </header>
+            <!--  END Header & Menu  -->
+
+
+            <!--  Page Content, class footer-fixed if footer is fixed  -->
+            <div id="page-content" class="header-static footer-fixed">
+                <!--  Slider  -->
+
+                <!--  END Slider  -->
+                <div id="home-wrap" class="content-section fullpage-wrap">
+
+                    <div class="row margin-leftright-null">
+
+                        <div class="col-md-12 padding-leftright-null">
+                            <div class="text padding-md-top-null container">
+
+								<div class="fields_auto" id="user_login" >
+									<form id="contact-form" class="padding-md padding-md-topbottom-null">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="phone" type="text" placeholder="phone Number">
+											</div>
+											<div class="col-md-12">
+												<input class="form-field1" name="mail" id="password" type="password" placeholder="Password">
+											</div>
+
+											<div class="col-md-12">
+												<a id="submit-contact" class="btn-alt active form-field1 shadow login_submit" >Login</a>
+												<div id="msg" class="message">
+                      </div>
+
+											</div>
+										</div>
+									</form>
+									<div class="center_auto">
+									<div class="col-md-6 forgot_pass cursor_p">
+										Forgot Password
+									</div>
+									<div class="col-md-6 newuser_login cursor_p">
+										New User
+									</div>
+									</div>
+								</div>
+
+								<div class="fields_auto" id="newuser_login">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null">
+										<div class="row">
+
+                      <div class="col-md-12">
+												<input class="form-field1" name="name" id="reg-name" type="text" placeholder="Name">
+											</div>
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="reg-phone" type="tel" placeholder="phone Number" disabled>
+											</div>
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="reg-email" type="email" placeholder="Email id">
+											</div>
+											<div class="col-md-12">
+												<input class="form-field1" name="mail" id="reg-password" type="password" placeholder="Password">
+											</div>
+
+											<div class="col-md-12">
+												<a id="submit-contact" class="btn-alt active form-field1 shadow reg-submit" >Submit</a>
+												<div id="msg" class="message"></div>
+
+											</div>
+										</div>
+									</form>
+									<div class="center_auto">
+										<div class="col-md-6 forgot_pass cursor_p">
+											Forgot Password
+										</div>
+										<div class="col-md-6 user_login cursor_p">
+											Login
+										</div>
+									</div>
+								</div>
+
+								<div class="fields_auto" id="forgot_pass">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1"  id="get-otp-phone" type="text" placeholder="phone Number">
+											</div>
+											<div class="col-md-12">
+												<input type="button" id="submit-contact" class="btn-alt active form-field1 shadow go_otp" value="Get OTP">
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+									<div class="center_auto">
+										<div class="col-md-6 newuser_login cursor_p">
+											New User
+										</div>
+										<div class="col-md-6 user_login cursor_p">
+											Login
+										</div>
+									</div>
+								</div>
+
+								<div class="fields_auto" id="enter_opt">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="for-otp" type="text" placeholder="Enter OTP">
+											</div>
+											<div class="col-md-12">
+												<input type="button" id="submit-contact" class="btn-alt active form-field1 shadow goto_forgotpassotp for_enter_otp_button" value="Submit">
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+								</div>
+
+
+
+                <div class="fields_auto" id="reg_forgot_pass">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1"  id="reg-get-otp-phone" type="text" placeholder="phone Number">
+											</div>
+											<div class="col-md-12">
+												<input type="button" id="submit-contact" class="btn-alt active form-field1 shadow reg_go_otp" value="Get OTP">
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+									<div class="center_auto">
+										<div class="col-md-6 newuser_login cursor_p">
+											New User
+										</div>
+										<div class="col-md-6 user_login cursor_p">
+											Login
+										</div>
+									</div>
+								</div>
+
+								<div class="fields_auto" id="reg_enter_opt">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="reg-enter-otp" type="text" placeholder="Enter OTP">
+											</div>
+											<div class="col-md-12">
+												<input type="button" id="submit-contact" class="btn-alt active form-field1 shadow reg_enter_otp_button" value="Submit">
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+								</div>
+
+								<div class="fields_auto" id="forgotPass_opt">
+									<form id="contact-form" class="padding-md padding-md-topbottom-null">
+										<div class="row">
+
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="for-password" type="text" placeholder="New Password">
+											</div>
+											<div class="col-md-12">
+												<input class="form-field1" name="name" id="for-conf-password" type="text" placeholder="Cofirm Password">
+											</div>
+											<div class="col-md-12">
+												<a id="submit-contact" class="btn-alt active form-field1 shadow change_password" >Submit</a>
+												<div id="msg" class="message"></div>
+											</div>
+										</div>
+									</form>
+								</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--  Main Wrap  -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- All js library -->
+        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+
+        <script src="assets/js/imagesloaded.min.js"></script>
+        <script src="assets/js/pace.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/app.js"></script>
+
+
+		<script>
+
+    if(localStorage.loginData){
+      window.location.href = 'home.html';
+    }
+		</script>
+
+    </body>
+</html>

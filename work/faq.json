@@ -1,0 +1,67 @@
+{
+  "faq":[
+    {
+      "heading" : "Orders",
+      "questions" : [
+        {
+          "question" : "What is the deadline for placing an order?",
+          "answer" : "On any working day, by 1 pm local time. You can put order in any time - i.e. night before, or multiple days in advance."
+        },
+        {
+          "question" : "How can I make changes to an existing order?",
+          "answer" : "You can make changes by pressing the Update button. You can either Save or Order, after your edits are done. A new order for a specific day overwrites any previous orders you placed. Make sure to submit the Order again after changes. You will also get confirmation email after each Order."
+        },
+        {
+          "question" : "What if I need to make changes after 1 pm?",
+          "answer" : "If you advise any changes after 1 pm via chat or email, we will communicate back the expected delivery date or confirm the changes requested over email, after your work times. Our goal is not to disturb you while you are at work."
+        },
+        {
+          "question" : "Can I place multiple tasks or orders for the same day?",
+          "answer" : "You can only place one order any given day. To serve all employee requests fairly, we advise you to type one shopping task and submit it as the order for that day."
+        },
+        {
+          "question" : "What is a shopping task?",
+          "answer" : "A shopping task can be any one of following needs:<ul><li>Shop few items from one store</li><li>Return few items at one store</li><li>Exchange an item</li><li>Locate a speciality item (if you have picture or description) in local store or</li><li>Research a (speciality) item and order online</li></ul>Please feel free to check with us if you have any questions."
+        },
+        {
+          "question" : "What if I have multiple tasks in order?",
+          "answer" : "If you end up recording multiple tasks for a day, please prioritize and move other tasks for future days. You can also go ahead, place the order for any future days right away without having to wait."
+        },
+        {
+          "question" : "Will my company know what I order?",
+          "answer" : "No. All of your transactions and communication with MyShoperoo is strictly confidential. Except the fact that you are either using or not using the service, we don’t provide any other details of frequency of use or type of your orders."
+        }
+      ]
+    },
+   {
+      "heading" : "Delivery",
+      "questions" : [
+        {
+          "question" : "When and where will you deliver?",
+          "answer" : "We work hard to process all orders placed by 1 pm and aim to deliver by 4 pm same day, at your office location. It will be either at front desk, kitchen, or lockers."
+        },
+        {
+          "question" : "What if item is not in stock?",
+          "answer" : "We first locate the items you need, before we go shop. If an item is not available in stock or we could not pick it on time, we will follow up with you after your work, until you are satisfied by the outcome.Our goal is not to disturb you while you are at work."
+        }
+      ]
+    },
+    {
+      "heading" : "Costs",
+      "questions" : [
+        {
+          "question" : "How much does it cost to use the service?",
+          "answer" : "There is no absolute cost for our service during the pilot. Post pilot, your employer will advise you of the cost for using this service, if any."
+        },
+        {
+          "question" : "How will I pay for the products you deliver?",
+          "answer" : "You can pay for the products we deliver in any of the below options:<ul><li>Cash, at par, based on the final price that is on merchant receipt.</li><li>Domestic Bank Check, at par.</li><li>Credit cards, at 2.75% credit card processing fee (we use Square currently and this is the same fee they charge us).</li></ul>We request you to pay us in of the above choice, on the same day of delivery."
+        },
+        {
+          "question" : "Can you keep my Credit Card on file?",
+          "answer" : "Yes, we can do that and automatically charge you at time of delivery each time without any hassle for you."
+        }
+      ]
+    }
+  ]
+}

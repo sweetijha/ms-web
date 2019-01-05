@@ -1,0 +1,5 @@
+[PHP]
+open_basedir=G:\PleskVhosts\walkneeds.com\myshoperoochat.walkneeds.com;C:\Windows\Temp
+safe_mode=off
+SMTP=relay-hosting.secureserver.net
+sendmail_from=walkneeds@sg2nwvpweb062.shr.prod.sin2.secureserver.net
